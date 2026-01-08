@@ -35,13 +35,26 @@ cargo uninstall gity
 
 You need a Google Gemini API key to use Gity. You can get one from [Google AI Studio](https://aistudio.google.com/).
 
-Set your API key as an environment variable in your shell profile (e.g., `~/.zshrc` or `~/.bashrc`):
+
+### Quick Setup
+
+Run the following command to set your API key:
+
+```bash
+gity config --api-key "your_api_key_here"
+```
+
+This ensures the key is saved persistently.
+
+### Environment Variables (Optional)
+
+You can also set the key using environment variables (highest priority):
 
 ```bash
 export GITY_GEMINI_API_KEY="your_api_key_here"
 ```
 
-Alternatively, you can create a `.env` file in your project root:
+Or via a `.env` file in your project root:
 
 ```ini
 GITY_GEMINI_API_KEY=your_api_key_here

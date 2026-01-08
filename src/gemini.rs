@@ -1,11 +1,7 @@
-use std::env;
-
 pub async fn generate_commit_message(
     diff_text: &str,
 ) -> Result<String, Box<dyn std::error::Error>> {
-    let api_key = env::var("GITY_GEMINI_API_KEY")
-        .or_else(|_| env::var("GEMINI_API_KEY"))
-        .expect("GITY_GEMINI_API_KEY or GEMINI_API_KEY must be set");
+    let api_key = crate::config::get_api_key()?;
 
     let url = format!(
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key={}",
