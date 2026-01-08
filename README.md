@@ -23,6 +23,14 @@ cargo install --path .
 
 This will install the `gity` binary to your Cargo bin directory (usually `~/.cargo/bin`).
 
+### Uninstallation
+
+To remove the tool:
+
+```bash
+cargo uninstall gity
+```
+
 ## Configuration
 
 You need a Google Gemini API key to use Gity. You can get one from [Google AI Studio](https://aistudio.google.com/).
