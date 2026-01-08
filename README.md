@@ -38,13 +38,13 @@ You need a Google Gemini API key to use Gity. You can get one from [Google AI St
 Set your API key as an environment variable in your shell profile (e.g., `~/.zshrc` or `~/.bashrc`):
 
 ```bash
-export GEMINI_API_KEY="your_api_key_here"
+export GITY_GEMINI_API_KEY="your_api_key_here"
 ```
 
 Alternatively, you can create a `.env` file in your project root:
 
 ```ini
-GEMINI_API_KEY=your_api_key_here
+GITY_GEMINI_API_KEY=your_api_key_here
 ```
 
 ## Usage
