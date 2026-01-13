@@ -37,10 +37,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 config.save()?;
                 println!("API key saved successfully.");
             } else {
-                println!(
-                    "Current API Key: {}",
-                    config::get_api_key().unwrap_or_else(|_| "Not set".to_string())
-                );
+                let key = config::get_api_key().unwrap_or_else(|_| "Not set".to_string());
+                println!("Current API Key: {}", mask_api_key(&key));
             }
             return Ok(());
         }
@@ -107,4 +105,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     Ok(())
+}
+
+fn mask_api_key(key: &str) -> String {
+    if key.len() <= 8 {
+        "********".to_string()
+    } else {
+        format!("{}...{}", &key[0..5], &key[key.len() - 3..])
+    }
 }
