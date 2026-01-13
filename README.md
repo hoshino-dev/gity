@@ -16,12 +16,39 @@
 Clone the repository and install using Cargo:
 
 ```bash
-git clone https://github.com/yourusername/gity.git
+git clone https://github.com/kantahoshino1/gity.git
 cd gity
 cargo install --path .
 ```
 
 This will install the `gity` binary to your Cargo bin directory (usually `~/.cargo/bin`).
+
+### Debian/Ubuntu Package (Recommended)
+
+You don't need `cargo` installed. Simply download the `.deb` file from the [Releases](https://github.com/kantahoshino1/gity/releases) page.
+
+```bash
+# Example: Download version 0.1.0 (replace with latest version)
+wget https://github.com/kantahoshino1/gity/releases/download/v0.1.0/gity_0.1.0_amd64.deb
+
+# Install
+sudo apt install ./gity_0.1.0_amd64.deb
+```
+
+### Build .deb from Source
+
+If you want to build the package yourself:
+
+1.  **Install `cargo-deb`**:
+    ```bash
+    cargo install cargo-deb
+    ```
+
+2.  **Build the package**:
+    ```bash
+    cargo deb
+    ```
+    The `.deb` file will be in `target/debian/`.
 
 ### Uninstallation
 

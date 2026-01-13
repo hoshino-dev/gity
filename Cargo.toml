@@ -12,3 +12,17 @@ dotenvy = "0.15"
 inquire = { version = "0.7", features = ["editor"] }
 clap = { version = "4.5.54", features = ["derive"] }
 directories = "6.0.0"
+
+[package.metadata.deb]
+copyright = "2024, Kanta Hoshino <kanta.hoshino@gmail.com>"
+license-file = ["LICENSE-MIT", "4"]
+extended-description = """\
+A CLI tool that automates Git commit messages using Google Gemini API.
+"""
+depends = "$auto"
+section = "utils"
+priority = "optional"
+assets = [
+    ["target/release/gity", "usr/bin/", "755"],
+    ["README.md", "usr/share/doc/gity/README.md", "644"],
+]
