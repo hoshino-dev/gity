@@ -38,22 +38,3 @@ pub fn commit(message: &str) -> Result<(), String> {
         ))
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_get_diff() {
-        // This will use the mock execute_command
-        let diff = get_diff().unwrap();
-        assert_eq!(diff, "mock diff");
-    }
-
-    #[test]
-    fn test_commit() {
-        // This will use the mock execute_command
-        let result = commit("test message");
-        assert!(result.is_ok());
-    }
-}

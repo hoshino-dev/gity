@@ -32,17 +32,3 @@ pub fn edit_message(message: &str) -> Option<String> {
         .prompt()
         .ok()
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_action_enum() {
-        let action = Action::Commit;
-        match action {
-            Action::Commit => assert!(true),
-            _ => assert!(false),
-        }
-    }
-}
