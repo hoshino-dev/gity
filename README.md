@@ -35,6 +35,8 @@ cargo uninstall gity
 
 You need a Google Gemini API key to use Gity. You can get one from [Google AI Studio](https://aistudio.google.com/).
 
+> [!WARNING]
+> **Data Privacy Notice**: If you use the free tier of the Gemini API, your input data (including staged code changes) may be used by Google for model training. It is recommended to use the paid tier or avoid using this tool for sensitive private repositories if ensuring data privacy is critical.
 
 ### Quick Setup
 
