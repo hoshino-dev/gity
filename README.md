@@ -90,9 +90,6 @@ cargo build
 
 # Run
 cargo run
-
-# Run tests
-cargo test
 ```
 
 ## License
