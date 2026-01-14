@@ -16,7 +16,7 @@
 Clone the repository and install using Cargo:
 
 ```bash
-git clone https://github.com/yourusername/gity.git
+git clone https://github.com/hoshino-dev/gity.git
 cd gity
 cargo install --path .
 ```
